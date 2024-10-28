@@ -1,0 +1,26 @@
+{# @pebvariable name="model" type="ru.yarsu.web.models.TrianglesVM" #}
+
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Треугольники </title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+        <h1> Треугольники, отсортированные по периметру</h1>
+        <p><b>Данные шаблона: </b> </p>
+<ul>
+{% for triangle in model.triangles.triangles %}
+    <li> <p>{{  triangle.id }}, {{  triangle.sideA  }},  {{  triangle.sideB }}, {{  triangle.sideC }} </p>
+    <p><a href= "/triangles/{{ triangle.id }}"> более подробно о треугольнике</a></p>
+
+    </li>
+{% endfor %}
+</ul>
+    </div>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

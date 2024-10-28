@@ -1,0 +1,23 @@
+{# @pebvariable name="model" type="ru.yarsu.web.models.CurTriangleVM" #}
+
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Треугольник </title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+        <h1> Треугольник № {{ model.triangle.id }}</h1>
+        <p><b>Данные шаблона: </b> </p>
+
+        <p>{{ model.triangle.sideA }}</p>
+        <p>{{ model.triangle.sideB }}</p>
+        <p>{{ model.triangle.sideC }}</p>
+        <p><a href="/"> Обратно, к списку треугольников</a></p>
+    </div>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
